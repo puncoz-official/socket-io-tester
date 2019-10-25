@@ -1,0 +1,23 @@
+{
+  "name": "socket-io-tester",
+  "version": "1.0.0",
+  "description": "Socket.io client for testing",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/puncoz-official/socket-io-tester.git"
+  },
+  "keywords": [
+    "socket.io",
+    "client"
+  ],
+  "author": "Puncoz Nepal <info@puncoz.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/puncoz-official/socket-io-tester/issues"
+  },
+  "homepage": "https://github.com/puncoz-official/socket-io-tester#readme"
+}
