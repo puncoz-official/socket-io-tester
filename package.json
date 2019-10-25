@@ -1,23 +1,51 @@
 {
   "name": "socket-io-tester",
-  "version": "1.0.0",
-  "description": "Socket.io client for testing",
-  "main": "index.js",
+  "version": "0.1.0",
+  "private": true,
+  "devDependencies": {
+    "@types/jest": "24.0.19",
+    "@types/node": "12.11.7",
+    "@types/react": "16.9.11",
+    "@types/react-dom": "16.9.3",
+    "@types/react-redux": "^7.1.5",
+    "@types/redux-actions": "^2.6.1",
+    "jest": "^24.9.0",
+    "node-sass": "^4.13.0",
+    "prettier": "^1.18.2",
+    "react-scripts": "3.2.0",
+    "redux-devtools-extension": "^2.13.8",
+    "ts-jest": "^24.1.0",
+    "tslint": "^5.20.0",
+    "tslint-config-prettier": "^1.18.0",
+    "typescript": "3.6.4"
+  },
+  "dependencies": {
+    "react": "^16.11.0",
+    "react-dom": "^16.11.0",
+    "react-redux": "^7.1.1",
+    "redux": "^4.0.4",
+    "redux-actions": "^2.6.5",
+    "redux-thunk": "^2.3.0"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/puncoz-official/socket-io-tester.git"
+  "eslintConfig": {
+    "extends": "react-app"
   },
-  "keywords": [
-    "socket.io",
-    "client"
-  ],
-  "author": "Puncoz Nepal <info@puncoz.com>",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/puncoz-official/socket-io-tester/issues"
-  },
-  "homepage": "https://github.com/puncoz-official/socket-io-tester#readme"
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
 }
