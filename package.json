@@ -46,9 +46,10 @@
     "clean": "rimraf npm-debug.log* yarn-error.log*",
     "format": "prettier --write \"src/**/*.ts\" \"src/**/*.tsx\"",
     "lint:ts": "tslint-config-prettier-check ./tslint.json",
-    "lint:ts:fix": "yarn format && yarn lint:ts",
+    "lint:ts:fix": "yarn format || yarn lint:ts",
     "lint:scss": "stylelint 'src/**/*.scss' --syntax scss",
     "lint:scss:fix": "yarn lint:scss --fix",
+    "lint": "yarn lint:ts:fix && yarn lint:scss:fix",
     "prebuild": "yarn test && yarn format && yarn lint"
   },
   "eslintConfig": {
@@ -68,10 +69,10 @@
   },
   "lint-staged": {
     "src/**/*.{ts,tsx}": [
-      "yarn --silent lint:ts:fix", "git add"
+      "yarn lint:ts:fix", "git add"
     ],
     "src/**/*.scss": [
-      "yarn --silent lint:scss:fix", "git add"
+      "yarn lint:scss:fix", "git add"
     ]
   },
   "husky": {
