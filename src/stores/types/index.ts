@@ -7,7 +7,7 @@ export type AppStates = {
 }
 
 export interface ActionWithPayload<TType, TPayload> {
-    type: TType,
+    type: TType
     payload: TPayload
 }
 
@@ -16,21 +16,19 @@ export interface Action<TType> {
 }
 
 export const createActionWithPayload = <TAction extends ActionWithPayload<TAction["type"], TAction["payload"]>>(
-    type: TAction["type"]
-): (
-    payload: TAction["payload"]
-) => ActionWithPayload<TAction["type"], TAction["payload"]> => {
+    type: TAction["type"],
+): ((payload: TAction["payload"]) => ActionWithPayload<TAction["type"], TAction["payload"]>) => {
     return (payload: TAction["payload"]) => ({
         type,
-        payload
+        payload,
     })
 }
 
 export const createAction = <TAction extends Action<TAction["type"]>>(
-    type: TAction["type"]
-): () => Action<TAction["type"]> => {
+    type: TAction["type"],
+): (() => Action<TAction["type"]>) => {
     return () => ({
-        type
+        type,
     })
 }
 

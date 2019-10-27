@@ -11,7 +11,7 @@ interface TabProps {
     closeTab: (id: number) => void
 }
 
-const Tab: FunctionComponent<TabProps> = ({connection, order, active, isDragging, setActive, closeTab}) => {
+const Tab: FunctionComponent<TabProps> = ({ connection, order, active, isDragging, setActive, closeTab }) => {
     const connId = useMemo(() => connection.id, [connection.id])
 
     const handleOnTabClick = useCallback(() => {
@@ -24,7 +24,7 @@ const Tab: FunctionComponent<TabProps> = ({connection, order, active, isDragging
 
             closeTab(connId)
         },
-        [closeTab, connId]
+        [closeTab, connId],
     )
 
     const shrinkUrl = useCallback((url: string): string => {
@@ -38,16 +38,15 @@ const Tab: FunctionComponent<TabProps> = ({connection, order, active, isDragging
     return (
         <div
             id={`${connection.id}`}
-            style={{order}}
+            style={{ order }}
             draggable={true}
-            onDragStart={e => {
-            }}
+            onDragStart={e => {}}
             className={`header-tab ${active ? "header-tab-active" : ""} ${isDragging ? "header-tab-fade" : ""}`}
             onClick={handleOnTabClick}
         >
             <span className="header-tab-title">{shrinkUrl(connection.url) || "New Tab"}</span>
             <span className="header-tab-close" onClick={handleOnTabCloseClick}>
-                <RemoveIcon size={12} color={active ? "#e6e6e6" : "#7a54a8"}/>
+                <RemoveIcon size={12} color={active ? "#e6e6e6" : "#7a54a8"} />
             </span>
         </div>
     )

@@ -2,7 +2,7 @@ import { ADD_CONNECTION, ConnectionsActions, ConnectionsState, REMOVE_CONNECTION
 
 const initialState: ConnectionsState = {
     list: [],
-    active: 0
+    active: 0,
 }
 
 const connectionReducer = (state: ConnectionsState = initialState, action: ConnectionsActions): ConnectionsState => {
@@ -15,28 +15,29 @@ const connectionReducer = (state: ConnectionsState = initialState, action: Conne
             disabled: false,
             connected: false,
             events: [],
-            order: list.length + 1
+            order: list.length + 1,
         })
 
-        return {...state, list}
+        return { ...state, list }
     }
 
     if (action.type === REMOVE_CONNECTION) {
         const list = [...state.list]
 
         return {
-            ...state, list: list.map((connection) => {
+            ...state,
+            list: list.map(connection => {
                 if (connection.id === action.payload) {
                     connection.disabled = true
                 }
 
                 return connection
-            })
+            }),
         }
     }
 
     if (action.type === SET_ACTIVE) {
-        return {...state, active: action.payload}
+        return { ...state, active: action.payload }
     }
 
     return state

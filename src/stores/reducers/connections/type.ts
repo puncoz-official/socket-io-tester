@@ -18,13 +18,10 @@ export interface ConnectionsState {
     active: number
 }
 
-export interface AddConnectionAction extends ActionWithPayload<typeof ADD_CONNECTION, number> {
-}
+export interface AddConnectionAction extends ActionWithPayload<typeof ADD_CONNECTION, number> {}
 
-export interface RemoveConnectionAction extends ActionWithPayload<typeof REMOVE_CONNECTION, number> {
-}
+export interface RemoveConnectionAction extends ActionWithPayload<typeof REMOVE_CONNECTION, number> {}
 
-export interface SetActiveAction extends ActionWithPayload<typeof SET_ACTIVE, number> {
-}
+export interface SetActiveAction extends ActionWithPayload<typeof SET_ACTIVE, number> {}
 
 export type ConnectionsActions = AddConnectionAction | RemoveConnectionAction | SetActiveAction

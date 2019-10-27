@@ -20,7 +20,7 @@ const Header: FunctionComponent = () => {
         (connId: number) => {
             dispatch(closeTab(connId))
         },
-        [dispatch]
+        [dispatch],
     )
 
     return (
@@ -39,7 +39,7 @@ const Header: FunctionComponent = () => {
                     />
                 ))}
 
-            <AddTab order={connections.length + 1} addTab={addTabHandler}/>
+            <AddTab order={connections.length + 1} addTab={addTabHandler} />
         </div>
     )
 }
