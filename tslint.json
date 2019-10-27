@@ -1,23 +1,27 @@
 {
   "defaultSeverity": "error",
-  "extends": [
-    "tslint-react"
+  "extends":         [
+    "tslint:recommended",
+    "tslint-react",
+    "tslint-config-prettier"
   ],
-  "jsRules": {
+  "jsRules":         {
   },
-  "rules": {
-    "member-access": false,
+  "rules":           {
+    "member-access":   false,
     "ordered-imports": false,
-    "quotemark": false,
-    "no-console": false,
-    "semicolon": false,
-    "jsx-no-lambda": false
+    "quotemark":       false,
+    "no-console":      false,
+    "semicolon":       false,
+    "jsx-no-lambda":   false,
+    "prettier":        true,
+    "interface-name":  false
   },
-  "rulesDirectory": [
+  "rulesDirectory":  [
+    "tslint-plugin-prettier"
   ],
-  "linterOptions": {
+  "linterOptions":   {
     "exclude": [
-      "config/**/*.js",
       "node_modules/**/*.ts"
     ]
   }

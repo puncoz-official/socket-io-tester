@@ -1,4 +1,4 @@
-import { createAction } from "redux-actions"
-import * as types from "./types"
+import { createActionWithPayload } from "../../types"
+import { SET_LOADING, SetLoadingAction } from "./type"
 
-export const setLoading = createAction(types.SET_LOADING)
+export const setLoading = createActionWithPayload<SetLoadingAction>(SET_LOADING)

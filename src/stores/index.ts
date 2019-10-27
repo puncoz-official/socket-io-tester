@@ -7,8 +7,5 @@ export default () => {
     const middleware = [thunk]
     const middlewareEnhancer = applyMiddleware(...middleware)
 
-    return createStore(
-        reducers,
-        composeWithDevTools(middlewareEnhancer)
-    )
+    return createStore(reducers, composeWithDevTools(middlewareEnhancer))
 }

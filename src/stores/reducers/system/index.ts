@@ -1,1 +1,1 @@
-export { default as systemReducer }from "./reducer"
+export { default as systemReducer } from "./reducer"

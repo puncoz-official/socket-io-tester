@@ -1,24 +1,31 @@
-.App {
-    text-align: center;
-
-    &-logo {
-        height: 40vmin;
-    }
-
-    &-header {
-        background-color: #282c34;
-        min-height: 100vh;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        font-size: calc(10px + 2vmin);
-        color: white;
-    }
-
-    &-link {
-        color: #09d3ac;
-    }
-
+body {
+    margin: 0;
+    font-family: helvetica, serif;
+    color: #333;
+    overflow: hidden;
 }
 
+.container {
+    &-body {
+        display: flex;
+    }
+}
+
+.divider {
+    background-color: #7a54a8;
+    width: 10px
+}
+
+.hidden {
+    display: none !important;
+}
+
+.clickable {
+    cursor: pointer;
+}
+
+.color-picker {
+    z-index: 10;
+    position: absolute;
+    left: 280px;
+}
