@@ -50,7 +50,7 @@
     "lint:scss": "stylelint 'src/**/*.scss' --syntax scss",
     "lint:scss:fix": "yarn lint:scss --fix",
     "lint": "yarn lint:ts:fix && yarn lint:scss:fix",
-    "prebuild": "yarn test && yarn format && yarn lint"
+    "prebuild": "yarn test && yarn lint"
   },
   "eslintConfig": {
     "extends": "react-app"
